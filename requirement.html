@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System Requirements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            background-image: url('https://htmlcolorcodes.com/assets/images/colors/light-gray-color-solid-background-1920x1080.png');
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .contact-section {
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-left: 5px solid #4CAF50;
+        }
+        .job-details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .job-title {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .requirement-status {
+            font-size: 16px;
+            color: #e53935;
+            font-weight: bold;
+            align-self: flex-start;
+        }
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            align-self: flex-end;
+            font-weight: bold;
+        }
+        .apply-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .job-responsibilities,
+        .job-qualifications {
+            margin-top: 10px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hospital Management System Requirements</h1>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Welcome to the official requirements page for the implementation of a new Hospital Management System (HMS) at <strong>[Hospital Name]</strong>. We are looking for qualified vendors or developers to design and deliver a robust, scalable, and user-friendly HMS to streamline all aspects of hospital administration.</p>
+        <p>The HMS will manage everything from patient registration and medical records to doctor scheduling and billing, ensuring that our hospital operates efficiently and offers the best possible service to our patients.</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Features and Modules</h2>
+        <h3>1. Patient Management</h3>
+        <ul>
+            <li>Patient Registration (including appointment scheduling)</li>
+            <li>Electronic Medical Records (EMR)</li>
+            <li>Patient Portal for accessing medical records, appointments, and billing</li>
+        </ul>
+
+        <h3>2. Doctor & Staff Management</h3>
+        <ul>
+            <li>Doctor Scheduling and Shift Management</li>
+            <li>Workload and Staff Roster Tracking</li>
+        </ul>
+
+        <h3>3. Billing & Invoicing</h3>
+        <ul>
+            <li>Automated Billing System</li>
+            <li>Integration with Insurance for Claims Processing</li>
+        </ul>
+
+        <h3>4. Pharmacy & Inventory Management</h3>
+        <ul>
+            <li>Pharmacy Stock Control and Prescription Tracking</li>
+            <li>Inventory Management for medical supplies and equipment</li>
+        </ul>
+
+        <h3>5. Reporting & Analytics</h3>
+        <ul>
+            <li>Hospital Performance Reports</li>
+            <li>Data Analytics for resource utilization and patient trends</li>
+        </ul>
+
+        <h3>6. Security & Compliance</h3>
+        <ul>
+            <li>Data Security with encryption and secure access protocols</li>
+            <li>HIPAA Compliance (or local equivalent healthcare regulations)</li>
+        </ul>
+
+        <h3>7. User Experience</h3>
+        <ul>
+            <li>User-friendly Interface for medical staff and administrators</li>
+            <li>Mobile Access for remote staff</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technical Requirements</h2>
+        <ul>
+            <li><strong>Scalability:</strong> Must be able to scale with hospital growth and support additional departments.</li>
+            <li><strong>Cloud Integration:</strong> Support cloud-based backup and storage options.</li>
+            <li><strong>Interoperability:</strong> Seamlessly integrate with medical devices and existing third-party systems.</li>
+            <li><strong>Backup & Disaster Recovery:</strong> Regular backups and a strong disaster recovery plan.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Vendor Qualifications</h2>
+        <ul>
+            <li>Proven experience in hospital or healthcare management software development.</li>
+            <li>Understanding of hospital workflows and processes.</li>
+            <li>Expertise in data security and compliance with healthcare regulations.</li>
+            <li>Portfolio with successful deployments of similar systems. Please include references or case studies.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Submission Guidelines</h2>
+        <p>Interested vendors are requested to submit their proposal including:</p>
+        <ul>
+            <li>Company Profile</li>
+            <li>Solution Overview, highlighting modules and technology stack</li>
+            <li>Project Timeline</li>
+            <li>Cost Breakdown (design, development, testing, deployment, and support)</li>
+            <li>References or Case Studies from similar projects</li>
+        </ul>
+        <p>Please send your proposal to <a href="mailto:hr@hospitalname.com">hr@hospitalname.com</a> by <strong>[Insert Deadline Date]</strong>.</p>
+    </div>
+
+    <div class="section">
+        <h2>Job Profiles</h2>
+        
+        <div class="job-details">
+            <div class="job-title">
+                <span>Doctor</span>
+                <span class="requirement-status">Current Requirement: <span style="color: green;">Open</span></span>
+                <button class="apply-button" onclick="openModal('doctor')">Apply</button>
+            </div>
+            <p>Doctors are responsible for diagnosing and treating patients, maintaining medical records, and collaborating with other healthcare professionals. Our hospital employs general practitioners and specialists.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Conduct thorough patient examinations.</li>
+                    <li>Diagnose and treat illnesses and injuries.</li>
+                    <li>Maintain and update patient medical records accurately.</li>
+                    <li>Prescribe medications and develop treatment plans.</li>
+                    <li>Collaborate with nurses and specialists for patient care.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Medical degree (MD or DO) from an accredited institution.</li>
+                    <li>Valid medical license to practice in [State/Country].</li>
+                    <li>Board certification in a relevant specialty is preferred.</li>
+                    <li>Strong interpersonal and communication skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-details">
+            <div class="job-title">
+                <span>Nurse</span>
+                <span class="requirement-status">Current Requirement: <span style="color: red;">Closed</span></span>
+            </div>
+            <p>Nurses are responsible for patient care, assisting doctors in treatments, administering medication, and keeping track of patient conditions. Nurses play a key role in ensuring that patients receive the best care.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Monitor and record patient vital signs and medical history.</li>
+                    <li>Administer medications and treatments as prescribed.</li>
+                    <li>Educate patients and families on health management and care plans.</li>
+                    <li>Assist doctors during examinations and procedures.</li>
+                    <li>Maintain a safe and clean patient environment.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Valid nursing license (RN or LPN) in [State/Country].</li>
+                    <li>Associate's degree or Bachelor's degree in Nursing.</li>
+                    <li>Experience in a clinical setting is preferred.</li>
+                    <li>Compassionate and patient-centered attitude.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-details">
+            <div class="job-title">
+                <span>Pharmacist</span>
+                <span class="requirement-status">Current Requirement: <span style="color: green;">Open</span></span>
+                <button class="apply-button" onclick="openModal('pharmacist')">Apply</button>
+            </div>
+            <p>Pharmacists manage the hospital's pharmacy, ensuring the availability of medicines and medical supplies. They are also responsible for advising patients and healthcare professionals on drug usage.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Dispense medications and provide prescription advice to patients.</li>
+                    <li>Ensure the safe storage and proper inventory of pharmaceuticals.</li>
+                    <li>Consult with healthcare providers on medication therapies.</li>
+                    <li>Educate patients on drug interactions and side effects.</li>
+                    <li>Stay updated on new drugs and healthcare trends.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Pharmacy degree (Pharm.D.) from an accredited institution.</li>
+                    <li>Valid pharmacy license in [State/Country].</li>
+                    <li>Previous experience in a hospital pharmacy setting preferred.</li>
+                    <li>Strong attention to detail and organizational skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-details">
+            <div class="job-title">
+                <span>Radiologist</span>
+                <span class="requirement-status">Current Requirement: <span style="color: green;">Open</span></span>
+                <button class="apply-button" onclick="openModal('radiologist')">Apply</button>
+            </div>
+            <p>Radiologists interpret medical images to diagnose and treat patients, and they work closely with other medical professionals to ensure comprehensive patient care.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Analyze X-rays, MRIs, CT scans, and ultrasounds.</li>
+                    <li>Provide detailed reports and communicate findings to referring physicians.</li>
+                    <li>Collaborate with healthcare teams for treatment planning.</li>
+                    <li>Ensure compliance with safety and regulatory standards.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Medical degree with a specialization in radiology.</li>
+                    <li>Board certification in radiology.</li>
+                    <li>Strong analytical and communication skills.</li>
+                    <li>Experience with imaging technology and software.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-details">
+            <div class="job-title">
+                <span>Lab Technician</span>
+                <span class="requirement-status">Current Requirement: <span style="color: green;">Open</span></span>
+                <button class="apply-button" onclick="openModal('labTechnician')">Apply</button>
+            </div>
+            <p>Lab technicians perform laboratory tests and analyses to help in diagnosing and treating patients. They are essential in supporting the clinical team.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Conduct tests on blood, urine, and other samples.</li>
+                    <li>Maintain laboratory equipment and ensure quality control.</li>
+                    <li>Prepare specimens for analysis and maintain accurate records.</li>
+                    <li>Report test results to physicians and healthcare staff.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Bachelor's degree in Medical Technology or related field.</li>
+                    <li>Valid lab technician certification.</li>
+                    <li>Experience in a clinical laboratory setting preferred.</li>
+                    <li>Attention to detail and strong analytical skills.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-details">
+            <div class="job-title">
+                <span>Physical Therapist</span>
+                <span class="requirement-status">Current Requirement: <span style="color: green;">Open</span></span>
+                <button class="apply-button" onclick="openModal('physicalTherapist')">Apply</button>
+            </div>
+            <p>Physical therapists help patients improve their movement and manage pain through therapeutic exercises and rehabilitation programs.</p>
+            <div class="job-responsibilities">
+                <strong>Responsibilities:</strong>
+                <ul>
+                    <li>Evaluate patient physical abilities and limitations.</li>
+                    <li>Create personalized treatment plans and exercise programs.</li>
+                    <li>Teach patients exercises to improve mobility and function.</li>
+                    <li>Monitor progress and adjust treatment plans as needed.</li>
+                </ul>
+            </div>
+            <div class="job-qualifications">
+                <strong>Qualifications:</strong>
+                <ul>
+                    <li>Doctor of Physical Therapy (DPT) degree.</li>
+                    <li>State license to practice as a physical therapist.</li>
+                    <li>Strong communication and interpersonal skills.</li>
+                    <li>Ability to work effectively with diverse patient populations.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section contact-section">
+        <h2>Contact Information</h2>
+        <p>If you have any questions regarding the project or application process, please feel free to contact us:</p>
+        <p><strong>Phone:</strong> +123-456-7890</p>
+        <p><strong>Email:</strong> <a href="mailto:info@hospitalname.com">info@hospitalname.com</a></p>
+    </div>
+</div>
+
+<!-- Modal for Job Application -->
+<div id="applicationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Apply for <span id="jobTitle"></span></h2>
+        <form id="applicationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="resume">Resume:</label>
+            <input type="file" id="resume" name="resume" required>
+            
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Describe your relevant experience..." required></textarea>
+            
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+    </div>
+</div>
+<script>
+    
+    function openModal(job) {
+        document.getElementById('jobTitle').textContent = job.charAt(0).toUpperCase() + job.slice(1); // Set the job title in the modal
+        document.getElementById('applicationModal').style.display = "block"; // Show modal
+    }
+
+    function closeModal() {
+        document.getElementById('applicationModal').style.display = "none"; // Hide modal
+    }
+
+    // Close the modal when the user clicks outside of the modal content
+    window.onclick = function(event) {
+        var modal = document.getElementById('applicationModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Form submission logic (basic validation example)
+    document.getElementById('applicationForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+
+        // You can add form validation here
+
+        // After form validation, close the modal
+        closeModal();
+        
+        // You can handle the form data here, such as sending it via AJAX or handling file uploads
+        alert("Your application for the " + document.getElementById('jobTitle').textContent + " position has been submitted!");
+    });
+</script>
+
+
+

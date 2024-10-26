@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In / Sign Up</title>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="form-container sign-in-container">
+      <form id="sign-in-form">
+        <h1>Sign In</h1>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+        <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+      </form>
+    </div>
+
+    <div class="form-container sign-up-container hidden">
+      <form id="sign-up-form">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" id="switch-to-signin">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('https://img.freepik.com/premium-photo/abstract-blur-hospital-medical-clinic-interior-background-generative-ai_874904-42483.jpg'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Added transparency to the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(205, 180, 219, 0.1);
+    width: 500px; /* Kept the increased width */
+    height: auto; /* Ensure the height adjusts based on content */
+    padding: 60px; /* Increased padding for more height */
+    transition: height 0.3s ease;
+}
+
+/* Rest of your CSS remains unchanged */
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(205, 180, 219, 0.1);
+    width: 500px; /* Kept the increased width */
+    height: auto; /* Ensure the height adjusts based on content */
+    padding: 60px; /* Increased padding for more height */
+    transition: height 0.3s ease;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 15px 0; /* Increased margin for more space */
+    width: 100%;
+    padding: 12px; /* Increased padding for larger input */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger button */
+    border: none;
+    background-color: #69bab2;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #c15d5d; /* Optional hover color change */
+}
+
+p {
+    margin-top: 10px;
+}
+
+p a {
+    color: #c0787c;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const signInForm = document.getElementById('sign-in-form');
+  const signUpForm = document.getElementById('sign-up-form');
+  const switchToSignUp = document.getElementById('switch-to-signup');
+  const switchToSignIn = document.getElementById('switch-to-signin');
+
+  // Handle sign in form submission
+  signInForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    // Here you would typically handle authentication
+    window.location.href = './skincare.html'; // Redirect to skincare.html
+  });
+
+  // Handle sign up form submission
+  signUpForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+    // Here you would typically handle account creation
+    window.location.href = './skincare.html'; // Redirect to skincare.html
+  });
+
+  // Switch to sign up form
+  switchToSignUp.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelector('.sign-in-container').classList.add('hidden');
+    document.querySelector('.sign-up-container').classList.remove('hidden');
+  });
+
+  // Switch to sign in form
+  switchToSignIn.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelector('.sign-up-container').classList.add('hidden');
+    document.querySelector('.sign-in-container').classList.remove('hidden');
+  });
+});
+</script>

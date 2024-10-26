@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our Services - Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Content Section for Services -->
+    <main>
+        <section class="services">
+            <h1>Our Medical Services</h1>
+            <p>At CityCare Hospital, we offer a comprehensive range of healthcare services to ensure that your health is our priority.</p>
+
+            <!-- Service Cards -->
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="https://media.istockphoto.com/id/1295774052/photo/doctor-wheeling-patient.jpg?s=612x612&w=0&k=20&c=6KGBg9GezgGNYd4qPKgpaPDo1qfdsqEZIq4MExg2p2I=" alt="Emergency Care">
+                    <h2>Emergency Care</h2>
+                    <p>24/7 emergency services with state-of-the-art equipment and highly trained medical professionals.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5i-abY3kcegTus5brg-xXl1DpkMykVcHCkQ&s" alt="Diagnostics">
+                    <h2>Diagnostics</h2>
+                    <p>Advanced diagnostic services including MRI, CT scan, X-ray, ultrasound, and lab tests.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://www.facs.org/media/m1zeluwj/surgery-homepage-hero-1216.jpg?rxy=0.5000690321689907496893552395,0.5001045369015262387622830859&rnd=133160306855200000" alt="Surgical Services">
+                    <h2>Surgical Services</h2>
+                    <p>We perform a wide range of surgical procedures, from routine to complex, in state-of-the-art operating rooms.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-PJtn-VSZksnAuPMUx5ZLLMBTOuFPQLlCA&s" alt="Pharmacy">
+                    <h2>Pharmacy</h2>
+                    <p>Our in-house pharmacy is open 24/7, stocked with medications and staffed by expert pharmacists.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLfyZxIpbm77l5Vy0h2rjuPInXUGVbeVcCKw&s" alt="Outpatient Services">
+                    <h2>Outpatient Services</h2>
+                    <p>Comprehensive outpatient care including consultations, diagnostics, and minor procedures.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://static.toiimg.com/thumb/msid-107213884,imgsize-2171279,width-400,height-225,resizemode-72/107213884.jpg" alt="Ambulance">
+                    <h2>Ambulance</h2>
+                    <p>24/7 ambulance services with trained paramedics to provide rapid emergency response and care.</p>
+                </div>
+
+                <!-- ECG Service Card -->
+                <div class="service-card">
+                    <img src="https://www.andhrahospitals.org/assets/uploads/services/ecg-machine-transformed.jpeg" alt="ECG Service">
+                    <h2>ECG Services</h2>
+                    <p>Comprehensive ECG services to monitor heart activity and diagnose potential heart conditions.</p>
+                </div>
+
+                <!-- New EEG Service Card -->
+                <div class="service-card">
+                    <img src="https://www.andhrahospitals.org/assets/uploads/services/Untitled-1.jpg" alt="EEG Service">
+                    <h2>EEG Services</h2>
+                    <p>Advanced EEG services for monitoring brain activity and diagnosing neurological conditions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>Phone: +91001456789 | Email: contact@hospital.com</p>
+            <p>123 Main St, Anytown, unity</p>
+            <p><strong>Operating Hours:</strong> Mon - Fri: 8:00 AM - 5:00 PM | Sat - Sun: 9:00 AM - 3:00 PM</p>
+        </div>
+        <p>&copy; 2024 CityCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // You can remove this script if the navigation is not needed.
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .services {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-card h2 {
+            color: #0066cc;
+            margin: 15px 0;
+        }
+
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgb(84, 90, 94);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .contact-details h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

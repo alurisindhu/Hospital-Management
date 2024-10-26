@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management Specialists</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Meet Our Hospital Management Specialists</h1>
+        <p>Leading experts in healthcare management to enhance hospital efficiency and patient care.</p>
+    </header>
+
+    <section class="specialists">
+        <h2>Our Specialists</h2>
+        <div class="specialist-card">
+            <img src="https://www.shutterstock.com/image-vector/male-doctor-smiling-happy-face-260nw-2481032615.jpg" alt="Dr.Aashish">
+            <h3>Dr.Aashish</h3>
+            <p>Expert in treating cardiovascular diseases and heart conditions.</p>
+            
+        </div>
+
+        <div class="specialist-card">
+            <img src="https://img.lovepik.com/element/40172/7420.png_1200.png" alt="Mr. James Anderson">
+            <h3>Mr. James Anderson</h3>
+            <p>Specializes in disorders of the nervous system, including the brain and spinal cord.</p>
+            
+        </div>
+
+        <div class="specialist-card">
+            <img src="https://img.freepik.com/premium-photo/cute-doctor-girl-world-international-heart-day_982093-145.jpg" alt="Dr. Riya">
+            <h3>Dr. Riya</h3>
+            <p>A leading consultant in hospital technology integration, focusing on electronic health record systems.</p>
+           
+        </div>
+        <div class="specialist-card">
+            <img src="https://png.pngtree.com/png-vector/20240112/ourlarge/pngtree-indian-lady-doctor-png-image_11436098.png" alt="Dr. Sameera Desai">
+            <h3>Dr. Sameera Desai</h3>
+            <p>An orthopedic surgeon specializing in joint replacement and sports injuries.</p>
+        </div>
+        <div class="specialist-card">
+            <img src="https://img.freepik.com/premium-photo/medical-institution-wallpaper-illustration-background-hospital-nurse-young-doctor_976599-987.jpg?w=360" alt="Dr. Kavita Rao">
+            <h3>Dr. Kavita Rao</h3>
+            <p>Specialist in obstetrics and gynecology, with a focus on reproductive health and women's wellness.</p>
+        </div>
+        <div class="specialist-card">
+            <img src="https://img.freepik.com/premium-photo/bright-cheerful-hospice-hospital-healthcare-worker_888204-320.jpg" alt="Dr. Arvind Sharma">
+            <h3>Dr. Arvind Sharma</h3>
+            <p>An expert in internal medicine with a focus on diabetes management and endocrine disorders.</p>
+        </div>
+        <div class="specialist-card">
+            <img src="https://cdn.pixabay.com/photo/2023/07/03/13/13/ai-generated-8104162_1280.jpg" alt="Dr. Priya Iyer">
+            <h3>Dr. Priya Iyer</h3>
+            <p>A renowned neurologist specializing in the treatment of stroke and other brain disorders.</p>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h2>Contact a Specialist</h2>
+        <form id="contactForm">
+            <label for="specialistName">Specialist:</label>
+            <input type="text" id="specialistName" name="specialistName" readonly>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management Specialists</p>
+        <p>Address: 123 Healthcare Lane, Medical City, Country, 12345</p>
+        <p>Phone: 910014567890</p>
+        <p>Email: contact@hospital.com</p>
+    </footer>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.specialists {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: #e9ecef;
+}
+
+.specialist-card {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.specialist-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.contact-btn {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.contact-btn:hover {
+    background-color: #0a9396;
+}
+
+.contact-form-section {
+    padding: 2em;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1em;
+}
+
+input, textarea {
+    padding: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5em;
+}
+
+button {
+    margin-top: 1.5em;
+    background-color: #005f73;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0a9396;
+}
+
+footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+</style>
+<script>
+// script.js
+
+// Function to populate the contact form with the selected specialist's name
+function showForm(specialistName) {
+    document.getElementById('specialistName').value = specialistName;
+    window.scrollTo(0, document.querySelector('.contact-form-section').offsetTop);
+}
+
+// Form submission handling
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const specialistName = document.getElementById('specialistName').value;
+
+    if (name && email && message && specialistName) {
+        alert(`Thank you, ${name}! Your message to ${specialistName} has been sent.`);
+        document.getElementById('contactForm').reset(); // Reset the form
+    } else {
+        alert('Please fill out all fields.');
+    }
+});
+
+</script>
+</body>
+</html>
